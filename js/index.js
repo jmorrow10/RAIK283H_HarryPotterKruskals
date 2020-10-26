@@ -37,9 +37,9 @@ function setup() {
 	};
 
 	// intialize the frontend view of the whole graph
-	var network = new vis.Network(container, data, options);
+	//var network = new vis.Network(container, data, options);
 
 	// perform kruskal's and intialize the frontend view of the MST
-	//data.edges = kruskalsMST(data.nodes, data.edges);
-	//var network = new vis.Network(container, data, options);
+	data.edges = kruskalsMST(data.nodes, data.edges);
+	var network = new vis.Network(container, data, options);
 }
